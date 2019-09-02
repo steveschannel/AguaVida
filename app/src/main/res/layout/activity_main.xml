@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b_information"
+        android:layout_width="357dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Información"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="428dp"
+        android:layout_height="448dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/b_caudal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Caudal" />
+
+            <Button
+                android:id="@+id/b_peso_g"
+                android:layout_width="456dp"
+                android:layout_height="80dp"
+                android:text="Peso de Cloro (Goteos)" />
+
+            <Button
+                android:id="@+id/b_peso_a"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Peso de Cloro (Autocompensante)" />
+
+            <Button
+                android:id="@+id/b_rapidez_g"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Rapidez de Goteo (Goteos)" />
+
+            <Button
+                android:id="@+id/b_rapidez_a"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Rapidez de Goteos (Autocompensante)" />
+
+            <Button
+                android:id="@+id/b_con_g"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Concentración de Solución Madre" />
+
+            <Button
+                android:id="@+id/b_desinfeccion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Desinfección" />
+
+            <Button
+                android:id="@+id/b_volumen_cube"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Volumen de Reservorio (Cuadrado)" />
+
+            <Button
+                android:id="@+id/b_volumen_cylinder"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Volumen de Reservorio (Cylindro)" />
+
+            <Button
+                android:id="@+id/b_cloro_botella"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Gramos de Cloro con Botella" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
