@@ -11,6 +11,13 @@ import org.w3c.dom.Text;
 
 public class G_Chlorine_Weight extends AppCompatActivity {
 
+    EditText caudaleditText;
+    EditText concentrationeditText;
+    EditText percenteditText;
+    TextView resultadotextView_g;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

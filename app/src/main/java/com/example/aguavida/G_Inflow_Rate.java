@@ -23,8 +23,11 @@ public class G_Inflow_Rate extends AppCompatActivity {
     int t2;
     int t3;
 
-    public double a;
-    public double result;
+    public float a;
+    public float a2;
+    public float result;
+
+    boolean nok = true;
 
     public void caudalinput(View view) {
 
@@ -34,11 +37,17 @@ public class G_Inflow_Rate extends AppCompatActivity {
         String exceptionMessage2 = "";
         String exceptionMessage3 = "";
 
+        boolean x = false;
+        boolean b = false;
+        boolean c = false;
+        boolean d = false;
+
         try{
             medidoreditText = (EditText) findViewById(R.id.medidoreditText);
             m = Integer.parseInt(medidoreditText.getText().toString());
         } catch (NumberFormatException e) {
             exceptionMessage = "Balde";
+            x = true;
         }
 
         try{
@@ -46,6 +55,7 @@ public class G_Inflow_Rate extends AppCompatActivity {
             t1 = Integer.parseInt(T1editText.getText().toString());
         } catch (NumberFormatException e) {
             exceptionMessage1 = "time 1";
+            b = true;
         }
 
         try{
@@ -53,6 +63,7 @@ public class G_Inflow_Rate extends AppCompatActivity {
             t2 = Integer.parseInt(T2editText.getText().toString());
         } catch (NumberFormatException e) {
             exceptionMessage2 = "time 2";
+            c = true;
         }
 
         try{
@@ -60,16 +71,25 @@ public class G_Inflow_Rate extends AppCompatActivity {
             t3 = Integer.parseInt(T3editText.getText().toString());
         } catch (NumberFormatException e) {
             exceptionMessage3 = "time 3";
+            d = true;
         }
 
-        Toast.makeText(this, exceptionMessage + " " + exceptionMessage1 + " " + exceptionMessage2 + "" + exceptionMessage3, Toast.LENGTH_LONG).show();
-
-        a = (t1 + t2 + t3)/3;
-        result = m / a;
+        if ( x || b || c || d ){
+        Toast.makeText(this, "Please add value in: " + exceptionMessage + " " + exceptionMessage1 + " " + exceptionMessage2 + " " + exceptionMessage3, Toast.LENGTH_LONG).show();
+    } else {
+            nok = false;
+        }
 
     }
 
+    public float calculate_caudal(){
 
+            a = (t1 + t2 + t3);
+            a2 = a/3;
+            result = m / a2;
+        return result;
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +101,18 @@ public class G_Inflow_Rate extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                caudalinput(null);
+                calculate_caudal();
 
-                TextView gcc_result_textView = (TextView) findViewById(R.id.g_result_textView);
-                gcc_result_textView.setText(result + " ");
+                if ( nok ){
+                    TextView gcc_result_textView = (TextView) findViewById(R.id.g_result_textView);
+                    gcc_result_textView.setText("Más información necesario.");
+                } else {
+                    TextView gcc_result_textView = (TextView) findViewById(R.id.g_result_textView);
+                    gcc_result_textView.setText(result + " litros por segundo.");
+                    nok = true;
+                    ;
+                }
 
             }
         });

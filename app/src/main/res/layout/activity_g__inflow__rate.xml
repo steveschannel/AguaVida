@@ -130,11 +130,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="423dp"
-        android:layout_height="88dp"
-        android:text="info"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="-8dp" />
 </android.support.constraint.ConstraintLayout>
