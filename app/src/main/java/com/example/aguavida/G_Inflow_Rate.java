@@ -27,7 +27,7 @@ public class G_Inflow_Rate extends AppCompatActivity {
     public float a2;
     public float result;
 
-    boolean nok = true;
+    boolean check = true;
 
     public void caudalinput(View view) {
 
@@ -77,7 +77,7 @@ public class G_Inflow_Rate extends AppCompatActivity {
         if ( x || b || c || d ){
         Toast.makeText(this, "Please add value in: " + exceptionMessage + " " + exceptionMessage1 + " " + exceptionMessage2 + " " + exceptionMessage3, Toast.LENGTH_LONG).show();
     } else {
-            nok = false;
+            check = false;
         }
 
     }
@@ -104,13 +104,13 @@ public class G_Inflow_Rate extends AppCompatActivity {
                 caudalinput(null);
                 calculate_caudal();
 
-                if ( nok ){
+                if ( check ){
                     TextView gcc_result_textView = (TextView) findViewById(R.id.g_result_textView);
                     gcc_result_textView.setText("Más información necesario.");
                 } else {
                     TextView gcc_result_textView = (TextView) findViewById(R.id.g_result_textView);
                     gcc_result_textView.setText(result + " litros por segundo.");
-                    nok = true;
+                    check = true;
                     ;
                 }
 

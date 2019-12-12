@@ -7,17 +7,6 @@
     tools:context=".G_Concentration">
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/g_con_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
