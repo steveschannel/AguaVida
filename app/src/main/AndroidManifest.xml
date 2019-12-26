@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".Chlorine_Bottle_Measure"></activity>
+        <activity android:name=".Chlorine_Bottle_Measure" />
         <activity android:name=".A_Concentration" />
         <activity android:name=".G_Concentration" />
-        <activity android:name=".Splash" />
         <activity android:name=".A_Drip_Rate" />
         <activity android:name=".Information" />
         <activity android:name=".R_Cubic" />
