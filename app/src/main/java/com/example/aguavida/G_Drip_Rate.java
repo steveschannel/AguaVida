@@ -3,6 +3,7 @@ package com.example.aguavida;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,9 +62,13 @@ public class G_Drip_Rate extends AppCompatActivity {
 
     public float calculate_drip () {
 
-        ml = liters * 1000;
-        h = days * 24;
-        result = ml/h/60;
+        if (days == 0) {
+            result = 0;
+        } else {
+            ml = liters * 1000;
+            h = days * 24;
+            result = ml/h/60;
+        }
 
         return result;
     }
