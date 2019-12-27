@@ -71,6 +71,12 @@
                 android:text="Rapidez de Goteos (Autocompensante)" />
 
             <Button
+                android:id="@+id/b_estimate"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Estimación de Rapidez de Goteo" />
+
+            <Button
                 android:id="@+id/b_con_g"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"

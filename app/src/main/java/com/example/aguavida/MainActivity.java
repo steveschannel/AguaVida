@@ -122,5 +122,15 @@ public class MainActivity extends AppCompatActivity {
             }
             //Chlorine measurements using bottles
         });
+
+        Button b_estimate = (Button)findViewById(R.id.b_estimate);
+        b_estimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startEstimate = new Intent(getApplicationContext(), Drip_Estimation.class);
+                startActivity(startEstimate);
+            }
+            //Chlorine measurements using bottles
+        });
     }
 }

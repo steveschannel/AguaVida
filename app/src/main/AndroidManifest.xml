@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".Drip_Estimation"></activity>
         <activity android:name=".Chlorine_Bottle_Measure" />
         <activity android:name=".A_Concentration" />
         <activity android:name=".G_Concentration" />

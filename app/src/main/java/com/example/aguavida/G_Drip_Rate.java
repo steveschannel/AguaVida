@@ -67,7 +67,7 @@ public class G_Drip_Rate extends AppCompatActivity {
         } else {
             ml = liters * 1000;
             h = days * 24;
-            result = ml/h/60;
+            result = ml/h;
         }
 
         return result;
@@ -92,7 +92,7 @@ public class G_Drip_Rate extends AppCompatActivity {
 
                 } else {
                     g_drip_results_TextView = (TextView) findViewById(R.id.g_drip_results_TextView);
-                    g_drip_results_TextView.setText(result + " ml/min");
+                    g_drip_results_TextView.setText(result / 60 + " ml/min");
                     check = true;
                 }
 
